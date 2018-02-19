@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.tabBar = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.skipVideoButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.videoBrowser = new System.Windows.Forms.WebBrowser();
             this.optionsTab = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.channelLabel = new System.Windows.Forms.Label();
@@ -40,18 +44,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.viewMinimumUpDown = new System.Windows.Forms.NumericUpDown();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tabBar.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.optionsTab.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bitMinimumUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpsUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewMinimumUpDown)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabBar
@@ -64,8 +71,49 @@
             this.tabBar.Size = new System.Drawing.Size(634, 426);
             this.tabBar.TabIndex = 1;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.skipVideoButton);
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(626, 400);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Video";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // skipVideoButton
+            // 
+            this.skipVideoButton.Location = new System.Drawing.Point(267, 371);
+            this.skipVideoButton.Name = "skipVideoButton";
+            this.skipVideoButton.Size = new System.Drawing.Size(75, 23);
+            this.skipVideoButton.TabIndex = 2;
+            this.skipVideoButton.Text = "Skip Video";
+            this.skipVideoButton.UseVisualStyleBackColor = true;
+            this.skipVideoButton.Click += new System.EventHandler(this.skipVideoButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.videoBrowser);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(614, 364);
+            this.panel1.TabIndex = 1;
+            // 
+            // videoBrowser
+            // 
+            this.videoBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.videoBrowser.Location = new System.Drawing.Point(0, 0);
+            this.videoBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.videoBrowser.Name = "videoBrowser";
+            this.videoBrowser.Size = new System.Drawing.Size(614, 364);
+            this.videoBrowser.TabIndex = 0;
+            // 
             // optionsTab
             // 
+            this.optionsTab.Controls.Add(this.button1);
+            this.optionsTab.Controls.Add(this.flowLayoutPanel2);
             this.optionsTab.Controls.Add(this.flowLayoutPanel1);
             this.optionsTab.Location = new System.Drawing.Point(4, 22);
             this.optionsTab.Name = "optionsTab";
@@ -88,7 +136,7 @@
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 7);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(215, 231);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(215, 177);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // channelLabel
@@ -155,42 +203,57 @@
             this.viewMinimumUpDown.Size = new System.Drawing.Size(120, 20);
             this.viewMinimumUpDown.TabIndex = 7;
             // 
-            // panel1
+            // flowLayoutPanel2
             // 
-            this.panel1.Controls.Add(this.webBrowser1);
-            this.panel1.Location = new System.Drawing.Point(6, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(614, 364);
-            this.panel1.TabIndex = 1;
+            this.flowLayoutPanel2.Controls.Add(this.label4);
+            this.flowLayoutPanel2.Controls.Add(this.textBox2);
+            this.flowLayoutPanel2.Controls.Add(this.label5);
+            this.flowLayoutPanel2.Controls.Add(this.maskedTextBox1);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(7, 190);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(281, 43);
+            this.flowLayoutPanel2.TabIndex = 1;
             // 
-            // tabPage1
+            // label4
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(626, 400);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Video";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Bot Username:";
             // 
-            // webBrowser1
+            // textBox2
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(614, 364);
-            this.webBrowser1.TabIndex = 0;
+            this.textBox2.Location = new System.Drawing.Point(3, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(109, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "oAuth Password";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(109, 16);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 371);
+            this.button1.Location = new System.Drawing.Point(7, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Skip Video";
+            this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -202,14 +265,16 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabBar.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.optionsTab.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bitMinimumUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bpsUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewMinimumUpDown)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -222,9 +287,9 @@
         private System.Windows.Forms.Label channelLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button skipVideoButton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser videoBrowser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown bitMinimumUpDown;
         private System.Windows.Forms.Label label2;
@@ -232,6 +297,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown viewMinimumUpDown;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 

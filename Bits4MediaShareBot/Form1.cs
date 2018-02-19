@@ -129,6 +129,11 @@ namespace Bits4MediaShareBot
                 key.SetValue(appName, (UInt32)value, RegistryValueKind.DWord);
             }
         }
+
+        private void skipVideoButton_Click(object sender, EventArgs e)
+        {
+            videoFinishedDuration(null, null);
+        }
     }
 
     
